@@ -1,4 +1,33 @@
 .App {
   text-align: center;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,0,0,1) 100%);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
+.theShop{
+  margin: 20px;
+  font-family: inherit;
+ 
+}
+
+.storeItem{
+  margin: 10px;
+  background-color: white;
+  font-family: inherit;
+  border-radius: 20px;
+  padding: 10px;
+  width: 200px;
+  transition: all .1s ease-in-out;
+}
+
+.storeItem:hover{
+  transform: scale(1.05)
+}
+
+.deployBtn{
+  font-size: x-large;
+  border-radius: 20px;
+}
