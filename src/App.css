@@ -1,13 +1,9 @@
 .App {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 0, 0, 1) 100%
-  );
+  background-color: #81171B;
   margin: 0px;
   height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:white;
 }
 
 h1,
@@ -26,19 +22,29 @@ h5 {
   align-items: center;
 }
 
+.battle{
+  font-family: inherit;
+  text-align: center;
+}
+
 .theShop {
-  display: flex;
   justify-content: center;
-  flex-direction: column;
   margin: 20px;
   font-family: inherit;
 }
+.shopItems{
+  display: flex;
+  margin: 0px;
+  width: 100vw;
+  flex-wrap:wrap;
+}
 
 .storeItem {
-  margin: 10px;
-  background-color: white;
+  text-align: center;
+  margin: 5px;
+  background-color: #EA8C55;
   font-family: inherit;
-  font-size: 10px;
+  font-size: 8px;
   border-radius: 20px;
   padding: 10px;
   width: 200px;
@@ -54,16 +60,42 @@ h5 {
   border-radius: 20px;
   width: 200px;
   transition: 250ms ease-in-out;
+  color: white;
+  background-color:#540804 ;
+  border-style: solid;
+  border-color: #EA8C55
 }
 
 .deployBtn:hover {
   transform: scale(1.3);
 }
 
+.playerStats{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .manualData {
+  border-radius: 20px;
   background-color: khaki;
+  width: 400px;
+  background-color: #C75146;
 }
 
 .autoData {
-  background-color: lavender;
+  background-color: #C75146;
+  border-radius: 20px;
+  width: 400px;
+  margin: 10px;
+}
+
+.attackEvent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.enemyPic{
+  width: 100px;
 }
