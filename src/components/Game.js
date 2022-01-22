@@ -87,8 +87,6 @@ const Game = () => {
     setBarracksPrice(barracksPrice * 1.5);
   }
 
-
-
   // HTML RENDERING
 
   return (
@@ -145,7 +143,7 @@ const Game = () => {
           {coins >= autoPrice && (
             <div className="storeItem" onClick={buyAutoPower}>
               <h1>{`Auto-Deploy Power - ${autoPrice} coins`}</h1>
-              <p>{`You're auto deploy will increase by 20%`}</p>
+              <p>{`You're warriors make 20% more on auto deploy`}</p>
             </div>
           )}
           {coins >= armoryPrice && (

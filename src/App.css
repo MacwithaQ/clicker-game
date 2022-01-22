@@ -16,6 +16,10 @@ h5 {
   text-align: center;
 }
 
+*{
+  box-sizing: border-box;
+}
+
 .playerHud {
   display: flex;
   flex-direction: column;
@@ -34,6 +38,7 @@ h5 {
 }
 .shopItems{
   display: flex;
+  align-items: center;
   margin: 0px;
   width: 100vw;
   flex-wrap:wrap;
