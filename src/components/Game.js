@@ -16,7 +16,7 @@ const Game = () => {
   const [troopCoinMultiplier, setTroopCoinMultiplier] = useState(1);
   const [autoTroopMult, setAutoTroopMult] = useState(1);
   const [autoCoinMult, setAutoCoinlMult] = useState(1);
-  const [enemyEngaged, setEnemyEngaged] = useState(true);
+  const [troopsTillnextBattle, setTroopsTillNextBattle] = useState(300);
 
   let purchaseSound = new Audio(purchasesound);
   let attackSound = new Audio(attack);
@@ -44,8 +44,14 @@ const Game = () => {
   }
 
   // Invasion functions
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  }
+
   function attackEnemy() {
-    setEnemyEngaged(false);
+    setTroopsTillNextBattle(troops * getRandomInt(2, 4));
   }
 
   function coinSteal() {
@@ -124,7 +130,7 @@ const Game = () => {
 
       {/* Invasion */}
 
-      {troops >= 300 && enemyEngaged && (
+      {troops >= troopsTillnextBattle && (
         <EnemyFight coinSteal={coinSteal} attackEnemy={attackEnemy} />
       )}
 
