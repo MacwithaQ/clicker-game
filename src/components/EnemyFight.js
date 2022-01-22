@@ -15,7 +15,11 @@ const EnemyFight = ({ attackEnemy, coinSteal }) => {
         Enemy orcs are raiding your coin reserve, attack or lose 200 coins every
         2 seconds!
       </h3>
-      <img className="enemyPic" src="https://pngimg.com/uploads/orc/orc_PNG22.png" alt=""></img>
+      <img
+        className="enemyPic"
+        src="https://pngimg.com/uploads/orc/orc_PNG22.png"
+        alt=""
+      ></img>
       <button className="deployBtn" onClick={attackEnemy}>
         Attack Invading Troops
       </button>

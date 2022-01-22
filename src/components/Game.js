@@ -27,7 +27,7 @@ const Game = () => {
     return () => {
       clearInterval(interval);
     };
-  }, [autoCoinMult, autoTroopMult, coinSteal]);
+  }, [autoCoinMult, autoTroopMult]);
 
   // DEPLOY FUNCTIONS
 
@@ -122,7 +122,7 @@ const Game = () => {
 
       {/* Invasion */}
 
-      {troops >= 100 && enemyEngaged && (
+      {troops >= 300 && enemyEngaged && (
         <EnemyFight coinSteal={coinSteal} attackEnemy={attackEnemy} />
       )}
 
