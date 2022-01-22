@@ -110,9 +110,11 @@ const Game = () => {
           <h5>{`🪙 / Sec: ${Math.ceil(10 * autoCoinMult * autoTroopMult)}`}</h5>
         </div>
       </div>
+
+      {/* Player Hud */}
       <div className="playerHud">
-        <h3>🪙: {coins}</h3>
-        <h3>Warriors: {troops}</h3>
+        <h3>🪙: {Math.ceil(coins)}</h3>
+        <h3>Warriors: {Math.ceil(troops)}</h3>
 
         {/* Deploy button */}
         <button className="deployBtn" onClick={deployTroop}>
