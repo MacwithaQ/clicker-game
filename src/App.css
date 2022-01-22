@@ -99,3 +99,9 @@ h5 {
 .enemyPic{
   width: 100px;
 }
+
+.homeTitle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

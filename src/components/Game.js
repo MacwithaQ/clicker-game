@@ -87,32 +87,34 @@ const Game = () => {
     setBarracksPrice(barracksPrice * 1.5);
   }
 
-  // RENDERING
+
+
+  // HTML RENDERING
 
   return (
     <div>
       <div className="playerStats">
         {/* Manual Deploy Player Stats */}
         <div className="manualData">
-          <h3>Manual Deploy Stats:</h3>
-          <h3>{`soldier / deployment: ${Math.ceil(troopMult)}`}</h3>
+          <h5>Manual Deploy Stats:</h5>
+          <h5>{`Warrior / Deployment: ${Math.ceil(troopMult)}`}</h5>
 
-          <h3>{`🪙 / soldier deployed: ${Math.ceil(
+          <h5>{`🪙 / Warrior Deployed: ${Math.ceil(
             troopMult * troopCoinMultiplier * 10
-          )}`}</h3>
+          )}`}</h5>
         </div>
 
         {/* Auto Deploy Player Stats */}
 
         <div className="autoData">
-          <h3>Auto Deploy Stats:</h3>
-          <h3>{`soldier / auto-deployment: ${Math.ceil(autoTroopMult)}`}</h3>
-          <h3>{`🪙 / sec: ${Math.ceil(10 * autoCoinMult * autoTroopMult)}`}</h3>
+          <h5>Auto Deploy Stats:</h5>
+          <h5>{`Warrior / Sec: ${Math.ceil(autoTroopMult)}`}</h5>
+          <h5>{`🪙 / Sec: ${Math.ceil(10 * autoCoinMult * autoTroopMult)}`}</h5>
         </div>
       </div>
       <div className="playerHud">
-        <h1>🪙: {coins}</h1>
-        <h1>Soldiers: {troops}</h1>
+        <h3>🪙: {coins}</h3>
+        <h3>Warriors: {troops}</h3>
 
         {/* Deploy button */}
         <button className="deployBtn" onClick={deployTroop}>
@@ -128,7 +130,7 @@ const Game = () => {
 
       {/* Item Shop Data */}
       <div className="theShop">
-        <h2>Item Shop</h2>
+        <h3>Item Shop</h3>
         <div className="shopItems">
           {coins >= infirmaryPrice && (
             <div className="storeItem" onClick={buyInfirmary}>
