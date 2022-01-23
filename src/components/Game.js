@@ -17,7 +17,7 @@ const Game = () => {
   const [autoTroopMult, setAutoTroopMult] = useState(1);
   const [autoCoinMult, setAutoCoinlMult] = useState(1);
   const [troopsTillnextBattle, setTroopsTillNextBattle] = useState(300);
-
+ 
   let purchaseSound = new Audio(purchasesound);
   let attackSound = new Audio(attack);
 
@@ -44,12 +44,15 @@ const Game = () => {
   }
 
   // Invasion functions
+
+  // Random multiplier
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
 
+  // Attack button
   function attackEnemy() {
     setTroopsTillNextBattle(troops * getRandomInt(2, 4));
   }
@@ -58,6 +61,7 @@ const Game = () => {
     attackSound.play();
     setCoins((coins) => coins - 200);
   }
+
 
   // SHOP FUNCTIONS
 
@@ -103,7 +107,7 @@ const Game = () => {
           <h5>Manual Deploy Stats:</h5>
           <h5>{`Warrior / Deployment: ${Math.ceil(troopMult)}`}</h5>
 
-          <h5>{`🪙 / Warrior Deployed: ${Math.ceil(
+          <h5>{`Coins 🪙 / Warrior Deployed: ${Math.ceil(
             troopMult * troopCoinMultiplier * 10
           )}`}</h5>
         </div>
@@ -113,13 +117,13 @@ const Game = () => {
         <div className="autoData">
           <h5>Auto Deploy Stats:</h5>
           <h5>{`Warrior / Sec: ${Math.ceil(autoTroopMult)}`}</h5>
-          <h5>{`🪙 / Sec: ${Math.ceil(10 * autoCoinMult * autoTroopMult)}`}</h5>
+          <h5>{`Coins 🪙 / Sec: ${Math.ceil(10 * autoCoinMult * autoTroopMult)}`}</h5>
         </div>
       </div>
 
       {/* Player Hud */}
       <div className="playerHud">
-        <h3>🪙: {Math.ceil(coins)}</h3>
+        <h3>Coins 🪙: {Math.ceil(coins)}</h3>
         <h3>Warriors: {Math.ceil(troops)}</h3>
 
         {/* Deploy button */}

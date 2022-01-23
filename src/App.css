@@ -1,9 +1,9 @@
 .App {
-  background-color: #81171B;
+  background-color: #81171b;
   margin: 0px;
   height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color:white;
+  color: white;
 }
 
 h1,
@@ -16,7 +16,7 @@ h5 {
   text-align: center;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -26,7 +26,7 @@ h5 {
   align-items: center;
 }
 
-.battle{
+.battle {
   font-family: inherit;
   text-align: center;
 }
@@ -36,18 +36,18 @@ h5 {
   margin: 20px;
   font-family: inherit;
 }
-.shopItems{
+.shopItems {
   display: flex;
   align-items: center;
   margin: 0px;
   width: 100vw;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
 .storeItem {
   text-align: center;
   margin: 5px;
-  background-color: #EA8C55;
+  background-color: #ea8c55;
   font-family: inherit;
   font-size: 8px;
   border-radius: 20px;
@@ -57,6 +57,7 @@ h5 {
 }
 
 .storeItem:hover {
+  cursor: pointer;
   transform: scale(1.05);
 }
 
@@ -64,18 +65,23 @@ h5 {
   font-size: x-large;
   border-radius: 20px;
   width: 200px;
-  transition: 250ms ease-in-out;
+  transition: 100ms ease-out;
   color: white;
-  background-color:#540804 ;
+  background-color: #540804;
   border-style: solid;
-  border-color: #EA8C55
+  border-color: #ea8c55;
 }
 
 .deployBtn:hover {
-  transform: scale(1.3);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.deployBtn:active {
+  background-color: #3e8e41;
+  transform: translateY(2px);
 }
 
-.playerStats{
+.playerStats {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,28 +91,33 @@ h5 {
   border-radius: 20px;
   background-color: khaki;
   width: 400px;
-  background-color: #C75146;
+  background-color: #c75146;
 }
 
 .autoData {
-  background-color: #C75146;
+  background-color: #c75146;
   border-radius: 20px;
   width: 400px;
   margin: 10px;
 }
 
-.attackEvent{
+.attackEvent {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.enemyPic{
+.enemyPic {
   width: 100px;
 }
 
-.homeTitle{
+.homeTitle {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.clickable {
+  transition: 0.5s ease-out;
+  transform: scale(1.3);
 }
