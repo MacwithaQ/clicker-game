@@ -104,7 +104,7 @@ const Game = () => {
         {/* Manual Deploy Player Stats */}
         <div className="manualData">
           <h5>Deploy Stats:</h5>
-          <h5>{`Warrior / Deployment: ${Math.ceil(troopMult)}`}</h5>
+          <h5>{`Warrior 🗡️/ Deployment: ${Math.ceil(troopMult)}`}</h5>
 
           <h5>{`Coins 🪙 / Warrior Deployed: ${Math.ceil(
             troopMult * troopCoinMultiplier * 10
@@ -115,7 +115,7 @@ const Game = () => {
 
         <div className="autoData">
           <h5>Auto Deploy Stats:</h5>
-          <h5>{`Warrior / Sec: ${Math.ceil(autoTroopMult)}`}</h5>
+          <h5>{`Warrior 🗡️ / Sec: ${Math.ceil(autoTroopMult)}`}</h5>
           <h5>{`Coins 🪙 / Sec: ${Math.ceil(
             10 * autoCoinMult * autoTroopMult
           )}`}</h5>
@@ -125,11 +125,11 @@ const Game = () => {
       {/* Player Hud */}
       <div className="playerHud">
         <h3>Coins 🪙: {Math.ceil(coins)}</h3>
-        <h3>Warriors: {Math.ceil(troops)}</h3>
+        <h3>Warriors 🗡️: {Math.ceil(troops)}</h3>
 
         {/* Deploy button */}
         <button className="deployBtn" onClick={deployTroop}>
-          Deploy
+          Deploy ⚔️
         </button>
       </div>
 
@@ -169,7 +169,7 @@ const Game = () => {
           )}
           {coins >= barracksPrice && (
             <div className="storeItem" onClick={buyBarracks}>
-              <h1>{`Barracks - ${barracksPrice} coins`}</h1>
+              <h1>{`Barracks - ${Math.ceil(barracksPrice)} coins`}</h1>
               <p>{`You have more housing for your troops, allowing you to deploy more troops automatically. Your troop auto-deployment is increased by ${1} extra troop per second.`}</p>
             </div>
           )}
