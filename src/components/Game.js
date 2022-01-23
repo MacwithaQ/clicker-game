@@ -17,7 +17,7 @@ const Game = () => {
   const [autoTroopMult, setAutoTroopMult] = useState(1);
   const [autoCoinMult, setAutoCoinlMult] = useState(1);
   const [troopsTillnextBattle, setTroopsTillNextBattle] = useState(300);
- 
+
   let purchaseSound = new Audio(purchasesound);
   let attackSound = new Audio(attack);
 
@@ -62,7 +62,6 @@ const Game = () => {
     setCoins((coins) => coins - 200);
   }
 
-
   // SHOP FUNCTIONS
 
   // Shop - buy Infirmary function
@@ -104,7 +103,7 @@ const Game = () => {
       <div className="playerStats">
         {/* Manual Deploy Player Stats */}
         <div className="manualData">
-          <h5>Manual Deploy Stats:</h5>
+          <h5>Deploy Stats:</h5>
           <h5>{`Warrior / Deployment: ${Math.ceil(troopMult)}`}</h5>
 
           <h5>{`Coins 🪙 / Warrior Deployed: ${Math.ceil(
@@ -117,7 +116,9 @@ const Game = () => {
         <div className="autoData">
           <h5>Auto Deploy Stats:</h5>
           <h5>{`Warrior / Sec: ${Math.ceil(autoTroopMult)}`}</h5>
-          <h5>{`Coins 🪙 / Sec: ${Math.ceil(10 * autoCoinMult * autoTroopMult)}`}</h5>
+          <h5>{`Coins 🪙 / Sec: ${Math.ceil(
+            10 * autoCoinMult * autoTroopMult
+          )}`}</h5>
         </div>
       </div>
 
